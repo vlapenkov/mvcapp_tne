@@ -13,7 +13,7 @@
       "commandName": "Project",
       "commandLineArgs": "no--ef-migrate",
       "launchBrowser": false,
-      "applicationUrl": "https://localhost:5501;http://local_host:5500",
+      "applicationUrl": "http://local_host:5500",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

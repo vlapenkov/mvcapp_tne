@@ -68,7 +68,7 @@ namespace mvcapp
                   options.TokenValidationParameters.NameClaimType = "name";
                     options.SignInScheme = "Cookies";
 
-                    options.Authority = "https://localhost:5501";
+                    options.Authority = "http://local_host:5500";
                     options.RequireHttpsMetadata = false;
 
                     options.ClientId = "mvc";
