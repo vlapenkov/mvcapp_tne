@@ -1,0 +1,14 @@
+[Unit]
+Description=Example .NET Web API Application running on Centos
+
+[Service]
+WorkingDirectory=/home/vladimir/mvcapp/WebApi1/bin/Debug/netcoreapp3.1/publish
+ExecStart=/usr/bin/dotnet /home/vladimir/mvcapp/WebApi1/bin/Debug/netcoreapp3.1/publish/WebApi1.dll
+Restart=always
+RestartSec=10
+SyslogIdentifier=webapi-app
+User=root
+Environment=ASPNETCORE_ENVIRONMENT=Production
+
+[Install]
+WantedBy=multi-user.target

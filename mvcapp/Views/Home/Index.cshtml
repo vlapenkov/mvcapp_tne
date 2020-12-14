@@ -1,0 +1,16 @@
+﻿@using mvcapp.Controllers;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Mvc app</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>@Url.Action(nameof(HomeController)) </p>
+</div>
+<div>
+@Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")
+</div>
+<pre>
+    .UseKestrel(options => options.Listen(IPAddress.Loopback, 5000)) убираем
+</pre>

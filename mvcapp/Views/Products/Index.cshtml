@@ -1,0 +1,20 @@
+﻿@using mvcapp.Controllers;
+@using System.Web;
+
+@model IEnumerable<WebApi1.Contracts.Dto.ProductDto>
+@{
+    ViewData["Title"] = "Products Page";
+}
+
+
+@foreach (var product in Model)
+{
+    <div class="row">
+        <div class="col-3">
+            @product.Id
+        </div>
+        <div class="col-3">
+            @product.Name            
+        </div>
+    </div>
+}
