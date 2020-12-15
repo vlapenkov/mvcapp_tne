@@ -68,11 +68,11 @@ namespace AspNetCoreIdentityServer
             //    options.Cookie.SameSite = SameSiteMode.Unspecified; //SameSiteMode.Unspecified in .NET Core 3.1
             //});
 
-            services.ConfigureApplicationCookie(options =>
-            {
-                options.Cookie.IsEssential = true;
-                options.Cookie.SameSite = SameSiteMode.Unspecified;
-            });
+            //services.ConfigureApplicationCookie(options =>
+            //{
+            //    options.Cookie.IsEssential = true;
+            //    options.Cookie.SameSite = SameSiteMode.Unspecified;
+            //});
 
 
             services.AddControllersWithViews();

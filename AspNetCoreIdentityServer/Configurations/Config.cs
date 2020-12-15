@@ -58,8 +58,8 @@ namespace AspNetCoreIdentityServer.Configurations
                         new Secret("secret".Sha256())
                     },
 
-                    RedirectUris = {"http://localhost:5000/signin-oidc"},
-                    PostLogoutRedirectUris = {"http://localhost:5000/signout-callback-oidc"},
+                    RedirectUris = {"https://localhost:5001/signin-oidc"},
+                    PostLogoutRedirectUris = {"https://localhost:5001/signout-callback-oidc"},
                     //PostLogoutRedirectUris = {"http://localhost:5000/"},
                     AllowedScopes =
                     {

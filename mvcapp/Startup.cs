@@ -39,14 +39,14 @@ namespace mvcapp
         {
             // нужен для нормальной работы OpenIdConnect в Chrome 8 без https.
             //Также нужен код в IS4 
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                options.MinimumSameSitePolicy = SameSiteMode.Unspecified;
-                options.OnAppendCookie = cookieContext =>
-                    CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
-                options.OnDeleteCookie = cookieContext =>
-                    CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
-            });
+            //services.Configure<CookiePolicyOptions>(options =>
+            //{
+            //    options.MinimumSameSitePolicy = SameSiteMode.Unspecified;
+            //    options.OnAppendCookie = cookieContext =>
+            //        CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
+            //    options.OnDeleteCookie = cookieContext =>
+            //        CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
+            //});
 
 
             services.AddHttpContextAccessor();
@@ -68,7 +68,7 @@ namespace mvcapp
                   options.TokenValidationParameters.NameClaimType = "name";
                     options.SignInScheme = "Cookies";
 
-                    options.Authority = "http://local_host:5500";
+                    options.Authority = "https://localhost:5501";
                     options.RequireHttpsMetadata = false;
 
                     options.ClientId = "mvc";
@@ -103,9 +103,9 @@ namespace mvcapp
             //Также нужен код в IS4 
 
             app.UseCookiePolicy();
-          // app.UseCookiePolicy(new CookiePolicyOptions { MinimumSameSitePolicy = SameSiteMode.Lax });
-           
+            // app.UseCookiePolicy(new CookiePolicyOptions { MinimumSameSitePolicy = SameSiteMode.Lax });
 
+            app.UseHttpsRedirection();
 
             app.UseStaticFiles();
 

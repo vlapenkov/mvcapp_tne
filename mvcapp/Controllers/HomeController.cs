@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -39,7 +40,23 @@ namespace mvcapp.Controllers
 
         public IActionResult Privacy()
         {
-            HttpContext.Response.Cookies.Append("name", "Tom");
+
+          var options =  new CookieOptions
+            {
+                // Set the secure flag, which Chrome's changes will require for SameSite none.
+                // Note this will also require you to be running on HTTPS.
+                Secure = false,
+
+                // Set the cookie to HTTP only which is good practice unless you really do need
+                // to access it client side in scripts.
+                HttpOnly = true,
+
+                // Add the SameSite attribute, this will emit the attribute with a value of none.
+                // To not emit the attribute at all set
+                // SameSite = (SameSiteMode)(-1)
+                SameSite = SameSiteMode.None
+            };
+            HttpContext.Response.Cookies.Append("name", "Tom1", options);
             return View();
         }
 
