@@ -36,9 +36,9 @@ namespace mvcapp.Controllers
 
 
             var products = await _productService.GetProducts();
-          
-           
-                return View(products);
+
+
+            return View(products);
         }
     }
 }
