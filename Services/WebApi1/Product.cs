@@ -8,5 +8,6 @@ namespace WebApi1
 
         [StringLength(255)]
         public string Name { get; set; }
+
     }
 }
