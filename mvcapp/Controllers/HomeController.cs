@@ -26,7 +26,7 @@ namespace mvcapp.Controllers
 
         public IActionResult Index()
         {
-           
+           // some home work
            var valuesSection = _configuration.GetSection("Menu:Items");
             foreach (IConfigurationSection section in valuesSection.GetChildren())
             {
