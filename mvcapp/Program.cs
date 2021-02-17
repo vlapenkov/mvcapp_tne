@@ -18,22 +18,21 @@ namespace mvcapp
             CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) {
-
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            int x = 1;
             var hostBuilder = Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
 
                 {
                     webBuilder
-                    .UseStartup<Startup>()
-                    .UseTneSerilog();
-                   // .UseKestrel(options => options.Listen(IPAddress.Loopback, 5000));                   
+                         .UseStartup<Startup>().UseTneSerilog();
+                    // .UseKestrel(options => options.Listen(IPAddress.Loopback, 5000));                   
 
-                });               
-
-                 
+                });
+           
 
             return hostBuilder;
-}
+        }
     }
 }
