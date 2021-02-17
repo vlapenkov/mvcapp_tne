@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mvcapp", "mvcapp\mvcapp.csproj", "{2D6AED1C-0863-4BFD-84A5-0786D527E48A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi1.Web", "WebApi1\WebApi1.Web.csproj", "{384F250E-CDC9-48B7-A0C7-6258C65F746B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi1.Web", "Services\WebApi1\WebApi1.Web.csproj", "{384F250E-CDC9-48B7-A0C7-6258C65F746B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{2D08D2A6-7391-4265-856E-00DA5F808F30}"
 EndProject
@@ -16,9 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{1FC3B544-1DF6-447D-8D4F-C2872404E96E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi1.Contracts", "Services\WebApi1.Contracts\WebApi1.Contracts.csproj", "{6B5774DA-1FF0-42C0-8F20-AC4D7BDDC720}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi1.Contracts", "WebApi1.Contracts\WebApi1.Contracts.csproj", "{6B5774DA-1FF0-42C0-8F20-AC4D7BDDC720}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{ECBC34A4-BFD1-4E88-93E1-12DC2832EDF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,8 +51,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{384F250E-CDC9-48B7-A0C7-6258C65F746B} = {1FC3B544-1DF6-447D-8D4F-C2872404E96E}
-		{6B5774DA-1FF0-42C0-8F20-AC4D7BDDC720} = {1FC3B544-1DF6-447D-8D4F-C2872404E96E}
+		{384F250E-CDC9-48B7-A0C7-6258C65F746B} = {ECBC34A4-BFD1-4E88-93E1-12DC2832EDF3}
+		{6B5774DA-1FF0-42C0-8F20-AC4D7BDDC720} = {ECBC34A4-BFD1-4E88-93E1-12DC2832EDF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22DBC37D-6F2A-4DB2-B757-8D0B7EC6DA15}

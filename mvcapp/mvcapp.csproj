@@ -25,7 +25,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.csproj" />
-    <ProjectReference Include="..\Webapi1.Contracts\Webapi1.Contracts.csproj" />
+    <ProjectReference Include="..\Services\Webapi1.Contracts\Webapi1.Contracts.csproj" />
   </ItemGroup>
   
 </Project>
