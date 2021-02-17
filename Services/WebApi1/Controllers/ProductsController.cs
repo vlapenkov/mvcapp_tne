@@ -37,6 +37,14 @@ namespace WebApi1.Web.Controllers
         }
 
         [HttpGet]
+        public async Task<IEnumerable<ProductDto>> GetProducts2()
+        {
+            var result = new[] { new ProductDto { Id = 1, Name = "First" }, new ProductDto { Id = 2, Name = "Second" } };
+
+            return result;
+        }
+
+        [HttpGet]
         public async Task<ProductDto> GetById(int id)
         {
             var result = await _mediator.Send(new GetProductByIdQuery { Id = id });
